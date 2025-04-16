@@ -1,1 +1,3 @@
-console.log("I need more beers")
+import OverlayMenu from "@/modules/OverlayMenu";
+
+new OverlayMenu();
