@@ -13,11 +13,11 @@ const Socials = (props) => {
             className={classNames(className, 'soc1als')}
         >
             <ul className="soc1als__list">
-                {links.map(({label, iconName}, index) => (
+                {links.map(({label, iconName, href}, index) => (
                     <li className='soc1ails__item' key={index}>
                       <Button
                         className="soc1ails__link"
-                        href="/"
+                        href={href}
                         target="_blank"
                         mode='black-10'
                         label={label}
