@@ -1,4 +1,4 @@
-import './Categories.scss'
+// import './Categories.scss'
 import Section from "@/layouts/Section";
 import CategoryCard from "@/components/CategoryCard";
 import Slider from "@/components/Slider";
