@@ -8,7 +8,7 @@ const Button = (props) => {
         href,
         type = 'button',
         target,
-        mode = '', // '' - по умолчанию, 'black-10' - черный 'transparent' - прозрачный, black-08
+        mode = '', // '' - по умолчанию, 'black-10' - черный 'transparent' - прозрачный, black-08, black-06
         label,
         isLabelHidden = false,
         iconName,
