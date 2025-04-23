@@ -1,7 +1,16 @@
 .tabs {
+  --tabsNonActiveContentDisplay: none;
+
+  &--enable-only-in-mobile {
+    @include mobile-above {
+      --tabsNonActiveContentDisplay: block;
+      --tabsNavigationDisplay: none; ;
+    }
+  }
+
   &__item {
     &:not(.is-active) {
-      display: none;
+      display: var(--tabsNonActiveContentDisplay);
     }
   }
 }
