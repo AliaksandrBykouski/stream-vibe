@@ -11,6 +11,7 @@ const MovieCard = (props) => {
     views,
     rating,
     released,
+    season,
     href = '/movie',
   } = props
 
@@ -34,6 +35,15 @@ const MovieCard = (props) => {
           >
             {duration}
           </Badge>
+        )}
+
+        {season && (
+            <Badge
+              iconName='catalog'
+              hasFillIcon
+            >
+              {season}
+            </Badge>
         )}
 
         {rating && (
