@@ -6,6 +6,7 @@ import Section from "@/layouts/Section/index.js";
 import SliderNavigation from "@/components/Slider/components/SliderNavigation/index.js";
 import Slider from "@/components/Slider/index.js";
 import CategoryCard from "@/components/CategoryCard/index.js";
+import MovieCard from "@/components/MovieCard/index.js";
 
 
 const Collections = () => {
@@ -27,6 +28,7 @@ const Collections = () => {
             const {
               title,
               categoryItems,
+              movieItems,
               sliderParams
             } = collectionItem
 
@@ -53,9 +55,14 @@ const Collections = () => {
                   navigationTargetElementId={sliderNavigationId}
                   isBeyondTheViewportOnMobileS
                 >
-                  {categoryItems.map((categoryItem, index) => (
+                  {categoryItems?.map((categoryItem, index) => (
                     <CategoryCard
                       {...categoryItem}
+                      key={index}
+                    />
+                  )) ?? movieItems?.map((movieItem, index) => (
+                    <MovieCard
+                      {...movieItem}
                       key={index}
                     />
                   ))}

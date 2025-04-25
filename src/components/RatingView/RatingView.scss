@@ -1,0 +1,23 @@
+.rating-view {
+  --ratingViewValue: 5;
+
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+
+  &__stars {
+    position: relative;
+
+    &-filled {
+      --ratingViewStarsClipEnd: calc(var(--ratingViewValue) / 5 * 100%);
+      @include abs-cover;
+
+      clip-path: polygon(
+        0 0,
+        var(--ratingViewStarsClipEnd) 0,
+        var(--ratingViewStarsClipEnd) 100%,
+        0 100%
+      );
+    }
+  }
+}

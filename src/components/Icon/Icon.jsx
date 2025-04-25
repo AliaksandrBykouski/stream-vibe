@@ -1,6 +1,6 @@
 import './Icon.scss'
 import classNames from 'classnames'
-import { Icon as MinistaIcon} from "minista";
+import { Icon as MinistaIcon} from "minista"
 
 const Icon = (props) => {
     const {

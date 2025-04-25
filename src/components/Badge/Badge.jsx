@@ -1,6 +1,6 @@
 import './Badge.scss'
 import classNames from 'classnames'
-import {Icon} from "minista";
+import Icon from "@/components/Icon";
 
 const Badge = (props) => {
   const {
@@ -26,7 +26,6 @@ const Badge = (props) => {
           name={iconName}
           hasFill={hasFillIcon}
           aria-label={iconAriaLabel}
-          iconId={iconName}
         />
       )}
       <span>{children}</span>
