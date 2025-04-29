@@ -43,6 +43,7 @@ const Slider = (props) => {
     sliderParams = defaultSliderParams,
     isBeyondTheViewportOnMobileS,
     hasScrollbarOnMobile = true,
+    navigationMode,
     navigationPosition = '', // '' - default, | abs-bottom
     isNavigationHiddenOnMobile = true
   } = props
@@ -70,6 +71,7 @@ const Slider = (props) => {
         <SliderNavigation
           className="slider__navigation"
           position={navigationPosition}
+          mode={navigationMode}
           isHiddenMobile={isNavigationHiddenOnMobile}
         />
       )}
