@@ -4,6 +4,7 @@ import {Image} from "minista";
 import Field from "@/components/Field/index.js";
 import Checkbox from "@/components/Checkbox/index.js";
 import Button from "@/components/Button/index.js";
+import Select from "@/components/Select/index.js";
 
 const Support = () => {
   const titleId = 'support-title'
@@ -48,9 +49,20 @@ const Support = () => {
         <Field
           className="support__form-cell"
           label="Phone Number"
-          placeholder="+420 123 456 789"
+          placeholder=" 123 456 789"
           inputMode="tel"
-          mask="+420 000-000-000"
+          mask="000-000-000"
+          renderBefore={(buttonClassName) => (
+            <Select
+              label="Country Code"
+              buttonClassName={buttonClassName}
+              options={[
+                { value: '+420', isSelected: true },
+                { value: '+421', isSelected: false },
+                { value: '+422', isSelected: false },
+              ]}
+            />
+          )}
         />
         <Field
           className="support__form-cell support__form-cell--wide"
