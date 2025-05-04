@@ -116,6 +116,7 @@
     padding: 10px;
     border: var(--border);
     border-radius: inherit;
+    cursor: pointer;
 
     @include hover {
       color: var(--color-white);

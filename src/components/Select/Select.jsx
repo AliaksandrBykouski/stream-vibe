@@ -35,7 +35,7 @@ const Select = (props) => {
         id={IDs.originalControl}
         tabIndex={-1}
         defaultValue={selectedOptions.value}
-        data-js-select-orginal-control=""
+        data-js-select-original-control=""
       >
         {options.map(({value}, index) => (
           <option

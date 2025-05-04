@@ -21,6 +21,8 @@
     background-color: var(--color-black-06);
     border: var(--border);
     border-radius: var(--border-radius-xxxs);
+    cursor: pointer;
+    min-width: 24px;
 
     &:not(:checked)::after {
       @include hide;
