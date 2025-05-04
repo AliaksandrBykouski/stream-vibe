@@ -52,10 +52,10 @@ const Support = () => {
           placeholder=" 123 456 789"
           inputMode="tel"
           mask="000-000-000"
-          renderBefore={(buttonClassName) => (
+          renderBefore={(fieldControlClassName) => (
             <Select
               label="Country Code"
-              buttonClassName={buttonClassName}
+              buttonClassName={fieldControlClassName}
               options={[
                 { value: '+420', isSelected: true },
                 { value: '+421', isSelected: false },

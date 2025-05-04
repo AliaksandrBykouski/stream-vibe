@@ -22,10 +22,15 @@
     position: fixed;
   }
   &__inner {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     column-gap: 16px;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
   }
   &__overlay-menu-dialog {
     position: fixed;
@@ -50,16 +55,16 @@
       translate: 50%;
     }
 
-    &[open] {
-      display: flex;
-
-      @starting-style {
-        @include starting-style;
+    @include tablet {
+      &[open] {
+       display: flex;
+       @include starting-style;
       }
-    }
-    &:not([open]) {
-      @include starting-style;
-    }
+
+      &:not([open]) {
+       @include starting-style;
+      }
+   }
   }
   &__menu {
     border-radius: var(--border-radius-l);
@@ -118,6 +123,9 @@
     display: flex;
     align-items: center;
     column-gap: 10px;
+    @include tablet {
+      justify-content: end
+    }
   }
   &__burger-button {
     position: relative;

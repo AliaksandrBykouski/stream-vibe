@@ -5,7 +5,7 @@ export const metadata = {
     title: "Movies and Shows",
 }
 
-export default function () {
+export default  () => {
   return (
     <>
       <MoviesBanner />

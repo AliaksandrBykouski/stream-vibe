@@ -1,6 +1,6 @@
 import './Hero.scss'
-import classNames from 'classnames'
 import Button from "@/components/Button/index.js";
+import playImgSrc from '@/assets/images/play.svg'
 
 const Hero = (props) => {
   const {
@@ -19,7 +19,7 @@ const Hero = (props) => {
               title={playButtonTitle}
           >
             <img
-              src="/play.svg"
+              src={playImgSrc}
               alt=""
               className="hero-__play-button-image"
               width={470}

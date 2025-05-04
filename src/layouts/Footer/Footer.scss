@@ -50,7 +50,6 @@
 
     &-link {
       position: relative;
-
       padding-inline: fluid-to-laptop(20, 16);
 
       &:first-child {
@@ -61,19 +60,14 @@
         padding-right: 0;
       }
 
-      &:not(:last-child)::after {
-        position: absolute;
-        top: 50%;
-        right: 0;
-
-        width: 1px;
-        height: 27px;
-
-        background-color: var(--color-black-15);
-
-        translate: 0 -50%;
-
-        content: '';
+      &:not(:last-child) {
+        align-items: center;
+        &::after {
+          content: '';
+          height: 1em;
+          margin-inline: fluid-to-laptop(20, 16);
+          border-right: var(--border);
+        }
       }
     }
   }
